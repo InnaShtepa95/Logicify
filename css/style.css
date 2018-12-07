@@ -3,46 +3,42 @@
   src: url("../fonts/OpenSansSemibold.eot");
   src: url("../fonts/OpenSansSemibold.eot") format("embedded-opentype"), url("../fonts/OpenSansSemibold.woff2") format("woff2"), url("../fonts/OpenSansSemibold.woff") format("woff"), url("../fonts/OpenSansSemibold.ttf") format("truetype"), url("../fonts/OpenSansSemibold.svg#OpenSansSemibold") format("svg"); }
 /************************
-.navbar-default {
-  background-color: transparent;
-
-  background-image: none;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-}
-
-.navbar-default .navbar-nav {
-  li {
-    //display: inline-block;
-    //width: 19%;
-    a {
-
-      margin: 45px 29px 44px 0px;
-      //text-align: center;
-      padding: 0 0 8px;
-      text-transform: uppercase;
-      font-size: 16px;
-      border-bottom: solid 3px transparent;
-      color: #484c55;
-
-    }
-  }
-}
-
-.navbar-default .navbar-nav li a:hover {
-
-  border-bottom: solid 3px #4d4d4d;
-  // text-transform: none;
-
-}
-
-.navbar-nav {
-  margin: 7.5px 15px;
-}
-
 
 **********************************/
+header .container-fluid {
+  background: linear-gradient(to bottom, #193F63, #10395F); }
+  header .container-fluid .container {
+    padding-top: 15px;
+    margin-bottom: 20px; }
+    header .container-fluid .container li {
+      border-right: solid  1px #FFFFFF; }
+      header .container-fluid .container li:nth-child(3) {
+        border-right: none; }
+      header .container-fluid .container li a {
+        color: white;
+        padding-top: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 0;
+        margin-top: 0px;
+        margin-bottom: 0px; }
+    header .container-fluid .container .social_icon {
+      color: white; }
+      header .container-fluid .container .social_icon a {
+        padding-left: 7px;
+        padding-right: 7px; }
+        header .container-fluid .container .social_icon a i {
+          color: white; }
+
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: transparent; }
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+  background-color: transparent; }
+
+.navbar-nav > li > .dropdown-menu li a {
+  color: black; }
+
 .navbar-header {
   padding-right: 60px; }
 
