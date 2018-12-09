@@ -28,6 +28,12 @@
   url('../fonts/openSans.svg#openSans') format('svg');
 }
 
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
 /************************
 
 **********************************/
@@ -47,10 +53,7 @@ header {
 
         a {
           color: white;
-          padding-top: 0;
-          padding-right: 20px;
-          padding-left: 20px;
-          padding-bottom: 0;
+         padding: 0 20px;
           margin-top: 0px;
           margin-bottom: 0px;
 
@@ -89,6 +92,9 @@ header {
 
 .navbar-header {
   padding-right: 60px;
+  @include max-screen(991px){
+    padding-right: 15px;
+  }
 }
 
 .navbar-default .navbar-nav li a {
@@ -131,6 +137,9 @@ header {
 
 .navbar-default .navbar-nav li .box {
   padding-right: 0;
+  @include max-screen(992px){
+    margin-left: 135px;
+  }
 }
 
 .navbar-default .navbar-nav li .drop {
@@ -141,7 +150,7 @@ header {
 
 section {
   .container-fluid {
-   //background-color: #B0B5B5;
+    //background-color: #B0B5B5;
 
     .container {
       .row {
@@ -157,7 +166,7 @@ section {
 
             width: 100%;
             height: 100%;
-           // box-shadow: 0 22px 40px -30px rgba(5, 24, 17, 0.98);
+            // box-shadow: 0 22px 40px -30px rgba(5, 24, 17, 0.98);
             border-radius: 5px;
           }
           h2 {
@@ -179,10 +188,36 @@ section {
             color: #B0B5B5;
             letter-spacing: 0;
 
-
           }
         }
       }
     }
+  }
+}
+
+/********************Mobile**********************/
+.right_menu {
+  @include max-screen(768px) {
+    display: none;
+  }
+}
+
+.navbar-toggle {
+  @include max-screen(768px) {
+    float: left;
+    margin-left: 16px;
+  }
+}
+
+.navbar-brand {
+  @include max-screen(768px) {
+float: none;
+   margin-left: 40px;
+  }
+}
+.navbar-right:nth-of-type(2){
+  @include max-screen(992px){
+    float: left!important;
+  //  margin-left: 100px;
   }
 }
